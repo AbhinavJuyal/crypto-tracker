@@ -1,3 +1,8 @@
+.newsfeed {
+    width: 100%;
+    z-index: 0;
+}
+
 .newsfeed__container > p {
     margin-bottom: 38px;
 }

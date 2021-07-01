@@ -16,16 +16,13 @@ body {
 }
 
 .app__body {
-  margin: 0;
-  display: grid;
-  place-items: center;
+  margin: 0 48px;
   padding: 0 50px;
 }
 
 .app__container {
   display: flex;
   padding-top: 36px;
-  width: 1024px;
   color: white;
-  z-index: 50;
+  justify-content: space-between;
 }

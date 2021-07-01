@@ -1,3 +1,10 @@
 .canvasjs-chart-toolbar {
-    display: none;
+  display: none;
+}
+
+canva,
+canva *,
+canva *::before,
+canva *::after {
+  position: static !important;
 }

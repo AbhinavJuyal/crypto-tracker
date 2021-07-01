@@ -3,6 +3,7 @@ import "./Preset.css";
 import Header from "./Header";
 import NewsFeed from "./NewsFeed";
 import Stats from "./Stats";
+import axios from "axios";
 
 function App() {
   const API_TOKEN = "c3e87ciad3ief4eld7i0";
@@ -15,7 +16,7 @@ function App() {
       <div className="app__body">
         <div className="app__container">
           <NewsFeed />
-          <Stats />
+          <Stats TOKEN={API_TOKEN} />
         </div>
       </div>
     </div>

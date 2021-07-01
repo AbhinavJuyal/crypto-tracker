@@ -8,16 +8,25 @@ const CanvasJS = CanvasJSReact.CanvasJS;
 function CandleGraph() {
   // CanvasJS.addColorSet("black-red", ["#26A69A", "#EF5350"]);
   // CanvasJS.addColorSet("white", ["#f2f2f2"]);
-  CanvasJS.addColorSet("green", ["#54B146"]);
-  const title = "Intel";
+  CanvasJS.addColorSet("colorSet", [
+    "#EF5350",
+    "#2F4F4F",
+    "#008080",
+    "#FF0000",
+    "#3CB371",
+    "#90EE90",
+  ]);
+  const chartTitle = "Intel";
+  // const chartWidth = 450;
   const options = {
-    width: 756,
-    colorSet: "green",
+    // width: chartWidth,
+    theme: "dark2",
+    colorSet: "colorSet",
     backgroundColor: "#222222",
     animationEnabled: true,
     exportEnabled: true,
     title: {
-      text: title,
+      text: chartTitle,
       fontColor: "#FFFFFF",
       fontSize: 12,
       fontFamily: "Raleway",
@@ -43,10 +52,13 @@ function CandleGraph() {
       lineColor: "#FFFFFF",
       labelFontColor: "#FFFFFF",
     },
+    dataPointWidth: 8,
     data: [
       {
         type: "candlestick",
         showInLegend: false,
+        fallingColor: "#EF5350",
+        risingColor: "#26A69A",
         yValueFormatString: "$###0.00",
         xValueFormatString: "MMMM YY",
         dataPoints: [
@@ -66,6 +78,26 @@ function CandleGraph() {
       },
     ],
   };
+
+  function changeBorderColor(options) {
+    let dataSeries;
+    for (let i = 0; i < options.data.length; i++) {
+      dataSeries = options.data[i];
+      for (let j = 0; j < dataSeries.dataPoints.length; j++) {
+        dataSeries.dataPoints[j].color =
+          dataSeries.dataPoints[j].y[0] <= dataSeries.dataPoints[j].y[3]
+            ? dataSeries.risingColor
+              ? dataSeries.risingColor
+              : dataSeries.color
+            : dataSeries.fallingColor
+            ? dataSeries.fallingColor
+            : dataSeries.color;
+      }
+    }
+  }
+
+  changeBorderColor(options);
+
   return (
     <>
       <CanvasJSChart options={options} />
