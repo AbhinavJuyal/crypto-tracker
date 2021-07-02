@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.427f79e7.chunk.css",
+    "main.js": "/static/js/main.f019214b.chunk.js",
+    "main.js.map": "/static/js/main.f019214b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ab73b663.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ab73b663.js.map",
+    "static/js/2.be57df0f.chunk.js": "/static/js/2.be57df0f.chunk.js",
+    "static/js/2.be57df0f.chunk.js.map": "/static/js/2.be57df0f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.427f79e7.chunk.css.map": "/static/css/main.427f79e7.chunk.css.map",
+    "static/js/2.be57df0f.chunk.js.LICENSE.txt": "/static/js/2.be57df0f.chunk.js.LICENSE.txt",
+    "static/media/robinhood.d4c5626b.svg": "/static/media/robinhood.d4c5626b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ab73b663.js",
+    "static/js/2.be57df0f.chunk.js",
+    "static/css/main.427f79e7.chunk.css",
+    "static/js/main.f019214b.chunk.js"
+  ]
+}
