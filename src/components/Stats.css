@@ -1,11 +1,13 @@
 .stats {
     border: 2px solid rgba(255,255,255,0.3);
     margin-left: 100px;
+    height: 530px;
 }   
 
 .stat {
     padding: 25px 50px;
     border-bottom: 2px solid rgba(255,255,255,0.3);
+    text-align: center;
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;

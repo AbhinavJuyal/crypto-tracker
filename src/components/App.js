@@ -1,25 +1,28 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Header from "./Header";
+import Dashboard from "../pages/Dashboard";
+import Account from "../pages/Account";
+import Portfolio from "../pages/Portfolio";
+import { GlobalProvider } from "../context/GlobalContext";
 import "./App.css";
 import "./Preset.css";
-import Header from "./Header";
-import NewsFeed from "./NewsFeed";
-import Stats from "./Stats";
-import axios from "axios";
 
 function App() {
-  const API_TOKEN = "c3e87ciad3ief4eld7i0";
-
   return (
-    <div className="app">
-      <div className="app__header">
-        <Header />
-      </div>
-      <div className="app__body">
-        <div className="app__container">
-          <NewsFeed />
-          <Stats TOKEN={API_TOKEN} />
+    <GlobalProvider>
+      <Router>
+        <div className="app">
+          <div className="app__header">
+            <Header />
+          </div>
+          <Switch>
+            <Route path="/" exact component={Dashboard} />
+            <Route path="/acc" component={Account} />
+            <Route path="/portfolio" component={Portfolio} />
+          </Switch>
         </div>
-      </div>
-    </div>
+      </Router>
+    </GlobalProvider>
   );
 }
 

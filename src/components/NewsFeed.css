@@ -1,8 +1,23 @@
 .newsfeed {
-    width: 100%;
-    z-index: 0;
+  width: 100%;
+  z-index: 0;
 }
 
 .newsfeed__container > p {
-    margin-bottom: 38px;
+  margin-bottom: 38px;
+}
+
+.newsfeed__chart {
+  position: relative;
+}
+
+.err {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translate(-63px, -50%);
+  z-index: 999;
+  font-weight: bold;
+  left: 50%;
+  margin: 0 auto;
 }
