@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Crypto Tracker
+A React project to track the crypto currency rates using Finnhub Stock API. 
+(For more details: https://finnhub.io/).
+
+## Before starting
+Add your token key from Finnhub Stock API from above link, and replace the the token in _default.js.
+Correct the imports accordingly.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
