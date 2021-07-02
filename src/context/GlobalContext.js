@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
-import TOKEN from "../config/default";
 
 const GlobalContext = React.createContext();
 
 export const GlobalProvider = ({ children }) => {
+  const TOKEN = "c3e87ciad3ief4eld7i0";
   const [graphValues, setGraphValues] = useState([]);
   const [graphTitle, setGraphTitle] = useState("Choose a option");
   const [statError, setStatError] = useState("");
