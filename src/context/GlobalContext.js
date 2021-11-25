@@ -13,7 +13,8 @@ export const GlobalProvider = ({ children }) => {
     let response = await axios.get(
       `https://finnhub.io/api/v1/crypto/symbol?exchange=binance&token=${TOKEN}`
     );
-    return response.data.splice(0, 8);
+    console.log(response.data);
+    return response.data.slice(0, 8);
   };
 
   const getSymbolValue = async (tar) => {
